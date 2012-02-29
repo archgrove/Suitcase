@@ -29,6 +29,14 @@ function unpack {
     mv ~/.vim ~/.suitcase/.vim
   fi
 
+  if [ -d ~/.bashrc ]; then
+    mv ~/.bashrc ~/.suitcase/.bashrc
+  fi
+
+  if [ -d ~/.profile]; then
+    mv ~/.profile ~/.suitcase/.profile
+  fi
+
   ln -s "$SUITCASE_DIR/.vim" ~/.vim
   ln -s "$SUITCASE_DIR/.vimrc" ~/.vimrc
 
@@ -43,6 +51,8 @@ function pack {
 
   rm ~/.vim
   rm ~/.vimrc
+  rm ~/.profile
+  rm ~/.bashrc
 
   mv ~/.suitcase/* ~
   rmdir ~/.suitcase
