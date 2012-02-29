@@ -10,6 +10,12 @@
 CWD=`pwd`
 SUITCASE_DIR=`dirname $CWD/$0`
 
+function conditionalMv {
+  if [ -f "$1" ]; then
+    mv "$1" "$2"
+  fi
+}
+
 function unpack {
   # Build a place to put files already present on the machine
 
@@ -21,21 +27,10 @@ function unpack {
   fi
 
   # Package up existing files and move them into the suitcase
-  if [ -f ~/.vimrc ]; then
-    mv ~/.vimrc ~/.suitcase/.vimrc
-  fi
-
-  if [ -d ~/.vim ]; then
-    mv ~/.vim ~/.suitcase/.vim
-  fi
-
-  if [ -d ~/.bashrc ]; then
-    mv ~/.bashrc ~/.suitcase/.bashrc
-  fi
-
-  if [ -d ~/.profile ]; then
-    mv ~/.profile ~/.suitcase/.profile
-  fi
+  conditionalMv ~/.vimrc ~/.suitcase/.vimrc
+  conditionalMv ~/.vim ~/.suitcase/.vim
+  conditionalMv ~/.bashrc ~/.suitcase/.bashrc
+  conditionalMv ~/.profile ~/.suitcase/.profile
 
   ln -s "$SUITCASE_DIR/.vim" ~/.vim
   ln -s "$SUITCASE_DIR/.vimrc" ~/.vimrc
@@ -56,21 +51,11 @@ function pack {
   rm ~/.profile
   rm ~/.bashrc
 
-  if [ -f ~/.suitcase/.vim ]; then
-    mv ~/.suitcase/.vim ~
-  fi
+  conditionalMv ~/.suitcase/.vim ~
+  conditionalMv ~/.suitcase/.vimrc ~
+  conditionalMv ~/.suitcase/.profile ~
+  conditionalMv ~/.suitcase/.bashrc ~
 
-  if [ -f ~/.suitcase/.vimrc ]; then
-    mv ~/.suitcase/.vimrc ~
-  fi
-
-  if [ -f ~/.suitcase/.profile ]; then
-    mv ~/.suitcase/.profile ~
-  fi
-
-  if [ -f ~/.suitcase/.bashrc ]; then
-    mv ~/.suitcase/.bashrc ~
-  fi
   rmdir ~/.suitcase
 
   echo "Packed up and ready to roll"
