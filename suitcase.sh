@@ -33,12 +33,14 @@ function unpack {
     mv ~/.bashrc ~/.suitcase/.bashrc
   fi
 
-  if [ -d ~/.profile]; then
+  if [ -d ~/.profile ]; then
     mv ~/.profile ~/.suitcase/.profile
   fi
 
   ln -s "$SUITCASE_DIR/.vim" ~/.vim
   ln -s "$SUITCASE_DIR/.vimrc" ~/.vimrc
+  ln -s "$SUITCASE_DIR/.profile" ~/.profile
+  ln -s "$SUITCASE_DIR/.bashrc" ~/.bashrc
 
   echo "Unpacked, and feeling at home"
 }
@@ -54,7 +56,21 @@ function pack {
   rm ~/.profile
   rm ~/.bashrc
 
-  mv ~/.suitcase/* ~
+  if [ -f ~/.suitcase/.vim ]; then
+    mv ~/.suitcase/.vim ~
+  fi
+
+  if [ -f ~/.suitcase/.vimrc ]; then
+    mv ~/.suitcase/.vimrc ~
+  fi
+
+  if [ -f ~/.suitcase/.profile ]; then
+    mv ~/.suitcase/.profile ~
+  fi
+
+  if [ -f ~/.suitcase/.bashrc ]; then
+    mv ~/.suitcase/.bashrc ~
+  fi
   rmdir ~/.suitcase
 
   echo "Packed up and ready to roll"
