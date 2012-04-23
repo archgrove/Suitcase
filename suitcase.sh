@@ -31,11 +31,13 @@ function unpack {
   conditionalMv ~/.vim ~/.suitcase/.vim
   conditionalMv ~/.bashrc ~/.suitcase/.bashrc
   conditionalMv ~/.profile ~/.suitcase/.profile
+  conditionalMv ~/.hushlogin ~/.suitcase/.hushlogin
 
   ln -s "$SUITCASE_DIR/.vim" ~/.vim
   ln -s "$SUITCASE_DIR/.vimrc" ~/.vimrc
   ln -s "$SUITCASE_DIR/.profile" ~/.profile
   ln -s "$SUITCASE_DIR/.bashrc" ~/.bashrc
+  ln -s "$SUITCASE_DIR/.hushlogin" ~/.hushlogin
 
   echo "Unpacked, and feeling at home"
 }
@@ -50,11 +52,12 @@ function pack {
   rm ~/.vimrc
   rm ~/.profile
   rm ~/.bashrc
+  rm ~/.hushlogin
 
   conditionalMv ~/.suitcase/.vim ~
   conditionalMv ~/.suitcase/.vimrc ~
   conditionalMv ~/.suitcase/.profile ~
-  conditionalMv ~/.suitcase/.bashrc ~
+  conditionalMv ~/.suitcase/.hushlogin ~
 
   rmdir ~/.suitcase
 
