@@ -47,15 +47,15 @@ if !exists('s:doneMappings')
 	" short forms for latex formatting and math elements. {{{
 	" taken from auctex.vim or miktexmacros.vim
 	call IMAP ('__', '_{<++>}<++>', "tex")
-	call IMAP ('()', '(<++>)<++>', "tex")
-	call IMAP ('[]', '[<++>]<++>', "tex")
-	call IMAP ('{}', '{<++>}<++>', "tex")
+	" call IMAP ('()', '(<++>)<++>', "tex") adamw
+	" call IMAP ('[]', '[<++>]<++>', "tex") adamw
+	" call IMAP ('{}', '{<++>}<++>', "tex") adamw
 	call IMAP ('^^', '^{<++>}<++>', "tex")
-	call IMAP ('$$', '$<++>$<++>', "tex")
-	call IMAP ('==', '&=& ', "tex")
-	call IMAP ('~~', '&\approx& ', "tex")
-	call IMAP ('=~', '\approx', "tex")
-	call IMAP ('::', '\dots', "tex")
+	" call IMAP ('$$', '$<++>$<++>', "tex") adamw
+  " call IMAP ('==', '&=& ', "tex") adamw
+	" call IMAP ('~~', '&\approx& ', "tex") adamw
+	" call IMAP ('=~', '\approx', "tex") adamw
+	" call IMAP ('::', '\dots', "tex") adamw
 	call IMAP ('((', '\left( <++> \right)<++>', "tex")
 	call IMAP ('[[', '\left[ <++> \right]<++>', "tex")
 	call IMAP ('{{', '\left\{ <++> \right\}<++>', "tex")
