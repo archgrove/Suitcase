@@ -254,7 +254,7 @@ call s:Tex_EnvMacros('ESL', '&Structure.', 'slide')
 call s:Tex_SectionMacros('SPA', 'part')
 call s:Tex_SectionMacros('SCH', 'chapter')
 call s:Tex_SectionMacros('SSE', 'section')
-call s:Tex_SectionMacros('SSS', 'subsection')
+" call s:Tex_SectionMacros('SSS', 'subsection') adamw
 call s:Tex_SectionMacros('SS2', 'subsubsection')
 call s:Tex_SectionMacros('SPG', 'paragraph')
 call s:Tex_SectionMacros('SSP', 'subparagraph')

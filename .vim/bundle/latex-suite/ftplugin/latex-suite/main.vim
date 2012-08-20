@@ -56,9 +56,9 @@ if !exists('s:doneMappings')
 	" call IMAP ('~~', '&\approx& ', "tex") adamw
 	" call IMAP ('=~', '\approx', "tex") adamw
 	" call IMAP ('::', '\dots', "tex") adamw
-	call IMAP ('((', '\left( <++> \right)<++>', "tex")
-	call IMAP ('[[', '\left[ <++> \right]<++>', "tex")
-	call IMAP ('{{', '\left\{ <++> \right\}<++>', "tex")
+	" call IMAP ('((', '\left( <++> \right)<++>', "tex") adamw
+	" call IMAP ('[[', '\left[ <++> \right]<++>', "tex") adamw
+	" call IMAP ('{{', '\left\{ <++> \right\}<++>', "tex") adamw
 	call IMAP (g:Tex_Leader.'^', '\hat{<++>}<++>', "tex")
 	call IMAP (g:Tex_Leader.'_', '\bar{<++>}<++>', "tex")
 	call IMAP (g:Tex_Leader.'6', '\partial', "tex")
