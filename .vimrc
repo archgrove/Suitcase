@@ -20,6 +20,9 @@ map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
+" Remap jj to escape to save my poor wrists
+inoremap jj <ESC>
+
 " Latex-Suite configuration bits
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
