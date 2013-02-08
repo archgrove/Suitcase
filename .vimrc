@@ -1,7 +1,7 @@
 " Install other plugins via Pathogen
 call pathogen#infect()
 
-" Syntax highlighting, plugins and indentation on!
+" Syntax highlighting, plugins and indentation on
 syntax on
 filetype plugin on
 filetype indent on
@@ -22,6 +22,10 @@ map <Down> <Nop>
 
 " Remap jj to escape to save my poor wrists
 inoremap jj <ESC>
+
+" Smart search (lower case search terms are case-insensitive)
+set ignorecase
+set smartcase
 
 " Latex-Suite configuration bits
 set grepprg=grep\ -nH\ $*
