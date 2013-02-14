@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/usr/share/vim/vim73'
-let g:netrw_dirhist_2='/Users/adamw/researchTools/Jigsaw/TheoremProver/output'
-let g:netrw_dirhist_3='/Users/adamw/Documents/iCal 2011-10-14 19:07:04.icbu/Calendars/72E695EE-565B-4418-8AE1-F52366FD748E.caldav'
-let g:netrw_dirhist_4='/Users/adamw/Documents/iCal 2011-10-14 19:07:04.icbu/Calendars/72E695EE-565B-4418-8AE1-F52366FD748E.caldav/1047D32F-F8F0-497E-8D20-5AB460BC5864.calendar'
-let g:netrw_dirhist_5='/Users/adamw/teaching/240-2011/automatedMarking'
-let g:netrw_dirhist_6='/Users/adamw/Papers/StrongLocalReasoning'
-let g:netrw_dirhist_7='/Volumes/Mercury/OpenSource/HandBrake/make'
-let g:netrw_dirhist_8='/Volumes/Mercury/OpenSource/hb-trunk/build/log'
-let g:netrw_dirhist_9='/Users/adamw/Projects/SixToEight/.git'
+let g:netrw_dirhist_cnt =0
