@@ -6,6 +6,8 @@
 #   into safe keeping
 #
 #   "pack"s a suitcase, reversing the above
+#
+# Existing files are moved into ~/.suitcase
 
 CWD=`pwd`
 SUITCASE_DIR=`dirname $CWD/$0`
@@ -39,6 +41,9 @@ function unpack {
   ln -s "$SUITCASE_DIR/.bashrc" ~/.bashrc
   ln -s "$SUITCASE_DIR/.hushlogin" ~/.hushlogin
 
+  git config --global core.editor > ~/.suitcase/gitCoreEditor
+  git config --global core.editor /usr/bin/vim
+
   echo "Unpacked, and feeling at home"
 }
 
@@ -57,7 +62,12 @@ function pack {
   conditionalMv ~/.suitcase/.vim ~
   conditionalMv ~/.suitcase/.vimrc ~
   conditionalMv ~/.suitcase/.profile ~
+  conditionalMv ~/.suitcase/.bashrc ~
   conditionalMv ~/.suitcase/.hushlogin ~
+  
+  git config --global core.editor `cat ~/.suitcase/gitCoreEditor`
+  rm ~/.suitcase/gitCoreEditor
+
 
   rmdir ~/.suitcase
 
