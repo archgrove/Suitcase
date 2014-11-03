@@ -32,4 +32,4 @@ set grepprg=grep\ -nH\ $*
 let g:tex_flavor='latex'
 
 " Change the label highlight; red and orange are too similar for me
-hi label ctermfg=1
+hi label ctermfg=2
