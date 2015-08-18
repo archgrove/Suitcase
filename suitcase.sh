@@ -34,12 +34,14 @@ function unpack {
   conditionalMv ~/.bashrc ~/.suitcase/.bashrc
   conditionalMv ~/.profile ~/.suitcase/.profile
   conditionalMv ~/.hushlogin ~/.suitcase/.hushlogin
+  conditionalMv ~/.tmux.conf ~/.suitcase/.tmux.conf
 
   ln -s "$SUITCASE_DIR/.vim" ~/.vim
   ln -s "$SUITCASE_DIR/.vimrc" ~/.vimrc
   ln -s "$SUITCASE_DIR/.profile" ~/.profile
   ln -s "$SUITCASE_DIR/.bashrc" ~/.bashrc
   ln -s "$SUITCASE_DIR/.hushlogin" ~/.hushlogin
+  ln -s "$SUITCASE_DIR/.tmux.conf" ~/.tmux.conf
 
   git config --global core.editor > ~/.suitcase/gitCoreEditor
   git config --global core.editor /usr/bin/vim
@@ -58,16 +60,16 @@ function pack {
   rm ~/.profile
   rm ~/.bashrc
   rm ~/.hushlogin
+  rm ~/.tmux.conf
 
   conditionalMv ~/.suitcase/.vim ~
   conditionalMv ~/.suitcase/.vimrc ~
   conditionalMv ~/.suitcase/.profile ~
   conditionalMv ~/.suitcase/.bashrc ~
-  conditionalMv ~/.suitcase/.hushlogin ~
+  conditionalMv ~/.suitcase/.tmux.conf ~
   
   git config --global core.editor `cat ~/.suitcase/gitCoreEditor`
   rm ~/.suitcase/gitCoreEditor
-
 
   rmdir ~/.suitcase
 
