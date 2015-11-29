@@ -20,6 +20,9 @@ let NERDTreeQuitOnOpen=1
 " Supertab
 Plugin 'ervandew/supertab'
 
+" Vim/TMux Navigator (uniform navigation between TMux and VI<)
+Bundle 'christoomey/vim-tmux-navigator'
+
 call vundle#end()
 
 syntax on
