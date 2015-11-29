@@ -1,7 +1,27 @@
-" Install other plugins via Pathogen
-call pathogen#infect()
+" Install other plugins via Vundle
+set nocompatible
+filetype off
+let mapleader = ","
 
-" Syntax highlighting, plugins and indentation on
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" Easymotion
+Plugin 'easymotion/vim-easymotion'
+
+" Nerdtree
+Plugin 'scrooloose/nerdtree'
+map <Leader>t :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=1
+
+" Supertab
+Plugin 'ervandew/supertab'
+
+call vundle#end()
+
 syntax on
 filetype plugin on
 filetype indent on
@@ -20,16 +40,11 @@ map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
-" Remap jj to escape to save my poor wrists
 inoremap jj <ESC>
 
 " Smart search (lower case search terms are case-insensitive)
 set ignorecase
 set smartcase
-
-" Latex-Suite configuration bits
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor='latex'
 
 " Change the label highlight; red and orange are too similar for me
 hi label ctermfg=2
