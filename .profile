@@ -8,3 +8,5 @@ set -o vi
 
 # Ensure bash histories work well with tmux
 shopt -s histappend
+
+export EDITOR=`which vim`
