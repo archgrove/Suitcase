@@ -23,6 +23,9 @@ Plugin 'ervandew/supertab'
 " Vim/TMux Navigator (uniform navigation between TMux and VI<)
 Bundle 'christoomey/vim-tmux-navigator'
 
+" Surround
+Plugin 'tpope/vim-surround'
+
 call vundle#end()
 
 syntax on
