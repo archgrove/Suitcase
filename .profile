@@ -11,6 +11,7 @@ export PATH=$PATH:/Users/adamw/.local/bin
 
 if which nvim > /dev/null; then
   export EDITOR=`which nvim`
+  alias vi=nvim
 else
   export EDITOR=`which vim`
 fi
