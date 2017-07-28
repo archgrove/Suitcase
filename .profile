@@ -1,10 +1,15 @@
-. ~/.suitcase/.profile
-. ~/.suitcase/.bashrc
+if [ -f ~/.suitcase/.profile ]; then
+  . ~/.suitcase/.profile
+fi
+
+if [ -f ~/.suitcase/.bashrc ]; then
+  . ~/.suitcase/.bashrc
+fi
 
 set -o vi
 export PATH=$PATH:/Users/adamw/.local/bin
 
-if which nvim; then
+if which nvim > /dev/null; then
   export EDITOR=`which nvim`
 else
   export EDITOR=`which vim`
@@ -12,7 +17,9 @@ fi
   
 
 # Import the more usual bashrc file
-. ~/.bashrc
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
 
 # Ensure bash histories work well with tmux
 shopt -s histappend
