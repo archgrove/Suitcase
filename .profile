@@ -3,7 +3,13 @@
 
 set -o vi
 export PATH=$PATH:/Users/adamw/.local/bin
-export EDITOR=`which vim`
+
+if which nvim; then
+  export EDITOR=`which nvim`
+else
+  export EDITOR=`which vim`
+fi
+  
 
 # Import the more usual bashrc file
 . ~/.bashrc
