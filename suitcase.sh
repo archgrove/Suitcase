@@ -45,6 +45,8 @@ function unpack {
 
   ln -s "$SUITCASE_DIR/.vim" ~/.vim
   ln -s "$SUITCASE_DIR/.vimrc" ~/.vimrc
+  mkdir -p ~/.config/nvim
+  ln -s "$SUITCASE_DIR/.nvimrc" ~/.config/nvim/init.vim
   ln -s "$SUITCASE_DIR/.profile" ~/.profile
   ln -s "$SUITCASE_DIR/.bashrc" ~/.bashrc
   ln -s "$SUITCASE_DIR/.hushlogin" ~/.hushlogin
@@ -66,6 +68,7 @@ function pack {
 
   rm ~/.vim
   rm ~/.vimrc
+  rm -r ~/.config/nvim/
   rm ~/.profile
   rm ~/.bashrc
   rm ~/.hushlogin
