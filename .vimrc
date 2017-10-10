@@ -111,3 +111,7 @@ if has('nvim')
 
   nmap <c-s> :call TripleSplit()<CR>
 endif
+
+" Add a visual indicate of column 80
+set colorcolumn=80
+highlight ColorColumn ctermbg=lightgrey guibg=lightgrey
