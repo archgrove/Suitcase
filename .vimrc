@@ -45,6 +45,9 @@ Bundle 'vim-ruby/vim-ruby'
 " Better Elixir support
 Plugin 'elixir-lang/vim-elixir'
 
+" Better Go support
+Plugin 'fatih/vim-go'
+
 call vundle#end()
 
 syntax on
@@ -63,10 +66,10 @@ set autoindent
 set showcmd
 
 " Remap arrow keys to avoid temptation
-map <Left> <Nop>
-map <Right> <Nop>
-map <Up> <Nop>
-map <Down> <Nop>
+"map <Left> <Nop>
+"map <Right> <Nop>
+"map <Up> <Nop>
+"map <Down> <Nop>
 
 inoremap jj <ESC>
 
