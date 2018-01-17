@@ -2,6 +2,11 @@
 set nocompatible
 filetype off
 
+syntax on
+filetype plugin on
+filetype indent on
+set omnifunc=syntaxcomplete#Complete
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -48,11 +53,12 @@ Plugin 'elixir-lang/vim-elixir'
 " Better Go support
 Plugin 'fatih/vim-go'
 
-call vundle#end()
+" Better Python support
+Plugin 'davidhalter/jedi-vim'
+let g:jedi#force_py_version=3
+let g:jedi#popup_on_dot = 0
 
-syntax on
-filetype plugin on
-filetype indent on
+call vundle#end()
 
 " Leader to ,
 let mapleader = ","
