@@ -94,6 +94,9 @@ hi VertSplit ctermfg=White ctermbg=Black guifg=fg
 
 " Neovim specific
 if has('nvim')
+  " We want login shells
+  let &shell='/bin/bash --login'
+
   " Escape terminal with the leader then escape
   tnoremap <leader><Esc> <C-\><C-n>
 
