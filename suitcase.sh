@@ -49,6 +49,7 @@ function unpack {
   ln -s "$SUITCASE_DIR/.nvimrc" ~/.config/nvim/init.vim
   ln -s "$SUITCASE_DIR/.profile" ~/.profile
   ln -s "$SUITCASE_DIR/.bashrc" ~/.bashrc
+  ln -s "$SUITCASE_DIR/.bashrc" ~/.zshrc
   ln -s "$SUITCASE_DIR/.hushlogin" ~/.hushlogin
   ln -s "$SUITCASE_DIR/.tmux.conf" ~/.tmux.conf
 
@@ -71,6 +72,7 @@ function pack {
   rm -r ~/.config/nvim/
   rm ~/.profile
   rm ~/.bashrc
+  rm ~/.zshrc
   rm ~/.hushlogin
   rm ~/.tmux.conf
 
